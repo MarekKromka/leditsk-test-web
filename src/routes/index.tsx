@@ -29,17 +29,27 @@ import {
 
 
 import heroImg from "@/assets/hero-warehouse.jpg";
-// Reálne fotky z galérie leditsk.sk
-import caseTvStudioImg from "@/assets/ledit-tvstudio.jpg";
-import caseTvRtvsImg from "@/assets/ledit-tvrtvs.jpg";
-import caseFitnessImg from "@/assets/ledit-fitness.jpg";
-import caseMuseumImg from "@/assets/ledit-museum.jpg";
-import caseHotelImg from "@/assets/ledit-hotel.jpg";
-import caseFountainImg from "@/assets/ledit-fountain.jpg";
-import caseFoundryImg from "@/assets/ledit-factory.jpg";
-import caseHabibiImg from "@/assets/ledit-habibi.jpg";
-import caseSpiritImg from "@/assets/ledit-spirit.jpg";
-import leditLogoImg from "@/assets/ledit-logo.png";
+// Reálne fotky z galérie leditsk.sk (CDN)
+import leditTvStudio from "@/assets/ledit-tvstudio.jpg.asset.json";
+import leditTvRtvs from "@/assets/ledit-tvrtvs.jpg.asset.json";
+import leditFitness from "@/assets/ledit-fitness.jpg.asset.json";
+import leditMuseum from "@/assets/ledit-museum.jpg.asset.json";
+import leditHotel from "@/assets/ledit-hotel.jpg.asset.json";
+import leditFountain from "@/assets/ledit-fountain.jpg.asset.json";
+import leditFactory from "@/assets/ledit-factory.jpg.asset.json";
+import leditHabibi from "@/assets/ledit-habibi.jpg.asset.json";
+import leditSpirit from "@/assets/ledit-spirit.jpg.asset.json";
+import leditLogo from "@/assets/ledit-logo.png.asset.json";
+
+const caseTvStudioImg = leditTvStudio.url;
+const caseFitnessImg = leditFitness.url;
+const caseMuseumImg = leditMuseum.url;
+const caseHotelImg = leditHotel.url;
+const caseFountainImg = leditFountain.url;
+const caseFoundryImg = leditFactory.url;
+const caseTvRtvsImg = leditTvRtvs.url;
+const caseHabibiImg = leditHabibi.url;
+const caseSpiritImg = leditSpirit.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -152,10 +162,6 @@ function Hero() {
         <div className="animate-fade-up flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-px w-8 bg-primary" />
           LED osvetlenie pre priemysel a obce
-          <span className="ml-2 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-[10px] font-semibold tracking-wider text-primary">
-            <span className="animate-pulse-dot h-1.5 w-1.5 rounded-full bg-primary" />
-            Voľné termíny obhliadky · júl 2026
-          </span>
         </div>
 
 
@@ -204,7 +210,7 @@ function Hero() {
 
           <div className="flex justify-center lg:justify-end">
             <img
-              src={leditLogoImg}
+              src={leditLogo.url}
               alt="LED it SHINE — logo LEDITSK"
               className="animate-fade-up w-full max-w-[300px] drop-shadow-[0_0_45px_rgba(251,146,60,0.35)] sm:max-w-[380px] lg:max-w-[460px] xl:max-w-[540px]"
             />
@@ -580,7 +586,7 @@ function CaseStudies() {
       ].map(P),
     },
     {
-      img: P("_f_IMG_0487.jpg"),
+      img: P("_f_IMG_0498.jpg"),
       category: "Scénické" as Category,
       tag: "Televízna scéna",
       title: "Scéna TV JOJ — Take me out",

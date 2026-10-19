@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
+const basePath = process.env.VITE_BASE_PATH || "/";
+
 export default defineConfig({
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   server: {
@@ -13,5 +15,5 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 4173,
   },
-  base: "./",
+  base: basePath,
 });
